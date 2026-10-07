@@ -23,3 +23,6 @@ jupyterlab>=4
 
 # --- protonation annotation for Potts training/precompute (training/) ---
 propka>=3.5           # imported at module load by mpnn.pipelines.potts_mpnn (pka_annotation)
+
+# --- ppjax: the JAX port of the generation path (src/ppjax) ---
+jax>=0.4.30           # CPU; use jax[cuda12] for GPU (this cluster is capped at CUDA 12.9)

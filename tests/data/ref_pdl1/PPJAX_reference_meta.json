@@ -1,0 +1,23 @@
+{
+ "pdb": "/zfs/s01/z04/home/gerstung/ProtonPottsMPNN/inference/examples/pdl1_seed_binder.pdb",
+ "binder_chain": "A",
+ "ckpt": "/zfs/s01/z04/home/gerstung/ProtonPottsMPNN/checkpoints/potts_v6_afdb_edge_his0.3_acid0.06/epoch-0125.ckpt",
+ "L": 229,
+ "V": 30,
+ "K": 48,
+ "unknown_indices": [
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20,
+  20
+ ],
+ "torch_version": "2.14.1+cu130"
+}

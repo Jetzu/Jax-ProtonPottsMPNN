@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ppjax"
+version = "0.1.0"
+description = "JAX port of ProtonPottsMPNN's generation path, numerically matched to the torch original"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "PolyForm-Noncommercial-1.0.0" }
+dependencies = ["jax>=0.4.30", "numpy>=1.26"]
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+cuda = ["jax[cuda12]>=0.4.30"]
+
+[project.scripts]
+ppjax = "ppjax.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ppjax = ["data/*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

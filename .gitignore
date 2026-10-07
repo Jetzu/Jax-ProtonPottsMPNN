@@ -25,3 +25,11 @@ dist/
 benchmarks/data/egfr_pdl1_folded.parquet
 benchmarks/data/egfr_pdl1_rescored.parquet
 benchmarks/data/egfr_pdl1_scrmsd.parquet
+
+# --- ppjax (the JAX port) ---
+__pycache__/
+*.egg-info/
+.pytest_cache/
+# golden reference tensors are 30-65 MB; regenerate with scripts/util/PPJAX_export_reference*_cc.py
+tests/data/*.npz
+tests/data/*/*.npz

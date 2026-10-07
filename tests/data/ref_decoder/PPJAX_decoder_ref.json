@@ -1,0 +1,536 @@
+{
+ "autoregressive_potts_sel": {
+  "criteria": {
+   "backend": "mpnn",
+   "selective_source": "potts",
+   "center_protonation_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "dep_map": {
+    "HIS-P": [
+     "HIS-S"
+    ],
+    "ASP-P": [
+     "ASP-D"
+    ],
+    "GLU-P": [
+     "GLU-D"
+    ]
+   },
+   "topk_sites": 2,
+   "placement_seq_masked": false,
+   "method": "autoregressive",
+   "selective": true,
+   "combined_lambda": 0.3,
+   "two_phase_frac": 0.5,
+   "temperature": 0.1,
+   "samples_per_site": 1,
+   "cv_patience": 3,
+   "cv_max": 50,
+   "block_size": 2,
+   "global_weight": 0.0,
+   "rank_normalize": false,
+   "zscale_mode": "block",
+   "adjacent_repeat_weight": 0.0,
+   "repetitive_window_weight": 0.0,
+   "repetitive_window_radius": 2,
+   "repetitive_window_parents": [],
+   "repetitive_window_gate_types": [],
+   "self_weight": 1.0,
+   "block_max_rounds": 10,
+   "seed_source": "native",
+   "forbidden_tokens": [
+    "HIS-A",
+    "ASP-A",
+    "GLU-A",
+    "UNK"
+   ],
+   "num_designs": 8,
+   "record_trajectory": false,
+   "center_count": 3,
+   "explicit_centers": [],
+   "center_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "placement_region": [
+    "all"
+   ],
+   "placement_by": "scan_potts",
+   "placement_label": "",
+   "candidate_pool": 12,
+   "n_plan_samples": 64,
+   "max_plans_per_seed": 8,
+   "infill_scope": "neighbourhood",
+   "sweep_order": "position",
+   "neighbour_k": 8,
+   "max_mutations": 8
+  },
+  "designs": [
+   {
+    "design_id": "ASP-P+GLU-P+HIS-P_selective_res33-93-100_s0",
+    "scheme": "selective",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "ALA ALA ALA GLN ALA VAL ILE THR GLN SER THR ILE THR SER THR SER ALA PRO PRO ALA GLN ILE THR LEU ILE ASP-D LEU GLY SER ALA VAL MET ASP-P THR ALA ILE ALA LYS ASN ALA CYS ALA SER LEU ALA ALA ASN ALA LEU ILE THR GLY VAL SER LEU ALA GLU-D VAL THR ALA PHE LEU VAL ALA LYS GLY TYR GLN VAL SER SER SER SER ALA SER SER THR THR LEU ALA ASN ALA GLY LEU THR PHE ALA GLU-D ASN LEU ALA ALA GLU-P GLN SER PHE CYS ALA ALA HIS-P GLY LEU ALA ILE THR VAL ALA ALA THR GLY SER THR ALA ALA",
+    "potts_energy": -51629.80859375,
+    "selective_energy": -21.95086669921875,
+    "global_protonation_dH": 24.27734375,
+    "placement_prob": 0.0,
+    "placement_entropy": 9.965783753784763e-10,
+    "sequence_decoded_prob_score": 0.875,
+    "sequence_entropy": 2.75,
+    "protonation_type": "ASP-P+GLU-P+HIS-P",
+    "site_rank": null,
+    "center_res_id": 33,
+    "n_neighbours": 8,
+    "n_centers": 3,
+    "center_res_ids": [
+     33,
+     93,
+     100
+    ],
+    "center_protonation_types": [
+     "ASP-P",
+     "GLU-P",
+     "HIS-P"
+    ],
+    "selective_energies": [
+     -9.14874267578125,
+     -6.798095703125,
+     -6.0040283203125
+    ],
+    "method": "autoregressive",
+    "backend": "mpnn",
+    "selective_source": "potts",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_potts",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 0.0,
+    "block_size": 2,
+    "sweep_order": "position",
+    "neighbour_k": 8,
+    "max_mutations": 8,
+    "energy_trajectory": null
+   }
+  ]
+ },
+ "autoregressive_decoder_sel": {
+  "criteria": {
+   "backend": "mpnn",
+   "selective_source": "decoder",
+   "center_protonation_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "dep_map": {
+    "HIS-P": [
+     "HIS-S"
+    ],
+    "ASP-P": [
+     "ASP-D"
+    ],
+    "GLU-P": [
+     "GLU-D"
+    ]
+   },
+   "topk_sites": 2,
+   "placement_seq_masked": false,
+   "method": "autoregressive",
+   "selective": true,
+   "combined_lambda": 0.3,
+   "two_phase_frac": 0.5,
+   "temperature": 0.1,
+   "samples_per_site": 1,
+   "cv_patience": 3,
+   "cv_max": 50,
+   "block_size": 2,
+   "global_weight": 0.0,
+   "rank_normalize": false,
+   "zscale_mode": "block",
+   "adjacent_repeat_weight": 0.0,
+   "repetitive_window_weight": 0.0,
+   "repetitive_window_radius": 2,
+   "repetitive_window_parents": [],
+   "repetitive_window_gate_types": [],
+   "self_weight": 1.0,
+   "block_max_rounds": 10,
+   "seed_source": "native",
+   "forbidden_tokens": [
+    "HIS-A",
+    "ASP-A",
+    "GLU-A",
+    "UNK"
+   ],
+   "num_designs": 8,
+   "record_trajectory": false,
+   "center_count": 3,
+   "explicit_centers": [],
+   "center_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "placement_region": [
+    "all"
+   ],
+   "placement_by": "scan_potts",
+   "placement_label": "",
+   "candidate_pool": 12,
+   "n_plan_samples": 64,
+   "max_plans_per_seed": 8,
+   "infill_scope": "neighbourhood",
+   "sweep_order": "position",
+   "neighbour_k": 8,
+   "max_mutations": 8
+  },
+  "designs": [
+   {
+    "design_id": "ASP-P+GLU-P+HIS-P_selective_dec_res33-93-100_s0",
+    "scheme": "selective_dec",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "ALA ALA ALA GLN ALA VAL ILE THR GLN SER THR ILE THR SER THR SER ALA PRO PRO ALA GLN ILE THR LEU ILE ASP-D LEU GLY SER ALA VAL LEU ASP-P THR ALA ILE ALA LYS ASN ALA CYS ALA SER LEU ALA ALA ASN ALA LEU ILE THR GLY VAL SER LEU ALA GLU-D VAL THR ALA PHE LEU VAL ALA LYS GLY TYR GLN VAL SER SER SER SER ALA SER SER THR THR LEU ALA ASN ALA GLY LEU THR PHE ALA GLU-D ASN LEU ALA ALA GLU-P GLN SER PHE CYS ALA ALA HIS-P GLY LEU ALA ILE THR VAL ALA ALA THR GLY SER THR ALA ALA",
+    "potts_energy": -51628.765625,
+    "selective_energy": -21.94049072265625,
+    "global_protonation_dH": 24.27734375,
+    "placement_prob": 0.0,
+    "placement_entropy": 9.965783753784763e-10,
+    "sequence_decoded_prob_score": 1.0,
+    "sequence_entropy": 2.5,
+    "protonation_type": "ASP-P+GLU-P+HIS-P",
+    "site_rank": null,
+    "center_res_id": 33,
+    "n_neighbours": 8,
+    "n_centers": 3,
+    "center_res_ids": [
+     33,
+     93,
+     100
+    ],
+    "center_protonation_types": [
+     "ASP-P",
+     "GLU-P",
+     "HIS-P"
+    ],
+    "selective_energies": [
+     -9.05206298828125,
+     -6.94512939453125,
+     -5.94329833984375
+    ],
+    "method": "autoregressive",
+    "backend": "mpnn",
+    "selective_source": "decoder",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_potts",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 0.0,
+    "block_size": 2,
+    "sweep_order": "position",
+    "neighbour_k": 8,
+    "max_mutations": 8,
+    "energy_trajectory": null
+   }
+  ]
+ },
+ "scan_mpnn_placement": {
+  "criteria": {
+   "backend": "mpnn",
+   "selective_source": "potts",
+   "center_protonation_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "dep_map": {
+    "HIS-P": [
+     "HIS-S"
+    ],
+    "ASP-P": [
+     "ASP-D"
+    ],
+    "GLU-P": [
+     "GLU-D"
+    ]
+   },
+   "topk_sites": 2,
+   "placement_seq_masked": false,
+   "method": "autoregressive",
+   "selective": true,
+   "combined_lambda": 0.3,
+   "two_phase_frac": 0.5,
+   "temperature": 0.1,
+   "samples_per_site": 1,
+   "cv_patience": 3,
+   "cv_max": 50,
+   "block_size": 2,
+   "global_weight": 0.0,
+   "rank_normalize": false,
+   "zscale_mode": "block",
+   "adjacent_repeat_weight": 0.0,
+   "repetitive_window_weight": 0.0,
+   "repetitive_window_radius": 2,
+   "repetitive_window_parents": [],
+   "repetitive_window_gate_types": [],
+   "self_weight": 1.0,
+   "block_max_rounds": 10,
+   "seed_source": "native",
+   "forbidden_tokens": [
+    "HIS-A",
+    "ASP-A",
+    "GLU-A",
+    "UNK"
+   ],
+   "num_designs": 8,
+   "record_trajectory": false,
+   "center_count": 3,
+   "explicit_centers": [],
+   "center_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "placement_region": [
+    "all"
+   ],
+   "placement_by": "scan_mpnn",
+   "placement_label": "",
+   "candidate_pool": 12,
+   "n_plan_samples": 64,
+   "max_plans_per_seed": 8,
+   "infill_scope": "neighbourhood",
+   "sweep_order": "position",
+   "neighbour_k": 8,
+   "max_mutations": 8
+  },
+  "designs": [
+   {
+    "design_id": "ASP-P+GLU-P+HIS-P_selective_res21-67-107_s0",
+    "scheme": "selective",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "ALA ALA ALA GLN ALA VAL ILE ALA GLN SER THR ILE THR SER THR SER ALA PRO PRO ASN HIS-P ILE THR LEU ILE ASP-D LEU GLY SER ALA VAL HIS-S VAL THR ALA ILE ALA LYS ASN ALA CYS ALA SER LEU ALA ALA ASN ALA LEU ILE THR GLY VAL SER LEU ALA GLU-D VAL THR ALA PHE LEU GLN ALA LYS GLY ASP-P THR VAL SER SER SER SER ALA SER SER THR THR LEU ALA ASN ALA GLY LEU THR PHE ALA GLU-D ASN LEU ALA SER ILE GLN SER PHE CYS ALA ALA LYS GLY LEU ALA ILE THR THR GLU-P ALA THR GLY SER THR ALA ALA",
+    "potts_energy": -51630.25390625,
+    "selective_energy": -3.745452880859375,
+    "global_protonation_dH": 24.16796875,
+    "placement_prob": 0.0,
+    "placement_entropy": 9.965783753784763e-10,
+    "sequence_decoded_prob_score": 0.875,
+    "sequence_entropy": 2.5,
+    "protonation_type": "ASP-P+GLU-P+HIS-P",
+    "site_rank": null,
+    "center_res_id": 21,
+    "n_neighbours": 8,
+    "n_centers": 3,
+    "center_res_ids": [
+     21,
+     67,
+     107
+    ],
+    "center_protonation_types": [
+     "HIS-P",
+     "ASP-P",
+     "GLU-P"
+    ],
+    "selective_energies": [
+     -1.5177001953125,
+     -4.60076904296875,
+     2.373016357421875
+    ],
+    "method": "autoregressive",
+    "backend": "mpnn",
+    "selective_source": "potts",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_mpnn",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 0.0,
+    "block_size": 2,
+    "sweep_order": "position",
+    "neighbour_k": 8,
+    "max_mutations": 8,
+    "energy_trajectory": null
+   }
+  ]
+ },
+ "mpnn_sample": {
+  "criteria": {
+   "backend": "mpnn",
+   "selective_source": "potts",
+   "center_protonation_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "dep_map": {
+    "HIS-P": [
+     "HIS-S"
+    ],
+    "ASP-P": [
+     "ASP-D"
+    ],
+    "GLU-P": [
+     "GLU-D"
+    ]
+   },
+   "topk_sites": 2,
+   "placement_seq_masked": false,
+   "method": "mpnn_sample",
+   "selective": true,
+   "combined_lambda": 0.3,
+   "two_phase_frac": 0.5,
+   "temperature": 0.1,
+   "samples_per_site": 1,
+   "cv_patience": 3,
+   "cv_max": 50,
+   "block_size": 2,
+   "global_weight": 0.0,
+   "rank_normalize": false,
+   "zscale_mode": "block",
+   "adjacent_repeat_weight": 0.0,
+   "repetitive_window_weight": 0.0,
+   "repetitive_window_radius": 2,
+   "repetitive_window_parents": [],
+   "repetitive_window_gate_types": [],
+   "self_weight": 1.0,
+   "block_max_rounds": 10,
+   "seed_source": "native",
+   "forbidden_tokens": [
+    "HIS-A",
+    "ASP-A",
+    "GLU-A",
+    "UNK"
+   ],
+   "num_designs": 3,
+   "record_trajectory": false,
+   "center_count": 1,
+   "explicit_centers": [],
+   "center_types": [],
+   "placement_region": [
+    "all"
+   ],
+   "placement_by": "scan_potts",
+   "placement_label": "",
+   "candidate_pool": 12,
+   "n_plan_samples": 64,
+   "max_plans_per_seed": 8,
+   "infill_scope": "neighbourhood",
+   "sweep_order": "position",
+   "neighbour_k": 8,
+   "max_mutations": 8
+  },
+  "designs": [
+   {
+    "design_id": "mpnn_sample_s1",
+    "scheme": "mpnn_sample",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "MET ALA LYS SER ALA PHE ILE THR ARG ALA THR ILE THR ASN PRO ASN ALA PRO PRO SER HIS ILE LYS LEU ILE SER PHE GLY ASN ALA VAL LEU VAL THR ALA ASN PHE LYS GLU-D PRO THR LYS ASN LEU ALA THR THR ALA LEU ILE ARG GLY VAL SER LEU GLU ASP-D VAL VAL ALA TYR LEU LYS ALA LYS GLY TRP LYS VAL VAL GLU-D GLU THR GLU ASP TYR ILE VAL LEU SER LYS GLU-D GLY VAL THR HIS ALA GLN MET GLU ALA ASP LEU LEU ALA PHE CYS LYS SER LYS GLY LEU LYS ILE THR ILE GLY ALA THR GLY THR THR ASN ALA",
+    "potts_energy": -51802.6015625,
+    "selective_energy": null,
+    "global_protonation_dH": null,
+    "placement_prob": null,
+    "placement_entropy": null,
+    "sequence_decoded_prob_score": 0.8048082478307377,
+    "sequence_entropy": 3.941759878581843,
+    "protonation_type": null,
+    "site_rank": null,
+    "center_res_id": null,
+    "n_neighbours": null,
+    "n_centers": null,
+    "center_res_ids": null,
+    "center_protonation_types": null,
+    "selective_energies": null,
+    "method": "mpnn_sample",
+    "backend": "mpnn",
+    "selective_source": "potts",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_potts",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 0.0,
+    "block_size": 2,
+    "sweep_order": "position",
+    "neighbour_k": 8,
+    "max_mutations": 8,
+    "energy_trajectory": null
+   },
+   {
+    "design_id": "mpnn_sample_s0",
+    "scheme": "mpnn_sample",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "MET SER LYS THR ALA PHE ILE THR LYS ALA VAL ILE THR ASN PRO ASN TYR PRO PRO SER HIS ILE LYS LEU MET ASP PHE GLY ASN ALA VAL MET VAL ASN ILE SER TYR LYS GLU-D ALA ASN LYS ASN LEU ALA ALA THR ALA LEU ILE ARG GLY VAL SER LEU GLU ASP-D ILE ILE ALA TYR PHE GLN ALA LYS GLY TRP LYS ILE VAL SER LYS THR SER GLU TYR ILE LEU LEU SER LYS ALA GLY LYS THR PHE ALA GLU-D MET GLU-D GLN ASP-D LEU LEU ASP-D PHE PHE LYS ALA LYS GLY LEU LYS VAL THR VAL GLY ALA THR GLY THR THR ASN ALA",
+    "potts_energy": -51799.06640625,
+    "selective_energy": null,
+    "global_protonation_dH": null,
+    "placement_prob": null,
+    "placement_entropy": null,
+    "sequence_decoded_prob_score": 0.7368875439892159,
+    "sequence_entropy": 3.9542333736558293,
+    "protonation_type": null,
+    "site_rank": null,
+    "center_res_id": null,
+    "n_neighbours": null,
+    "n_centers": null,
+    "center_res_ids": null,
+    "center_protonation_types": null,
+    "selective_energies": null,
+    "method": "mpnn_sample",
+    "backend": "mpnn",
+    "selective_source": "potts",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_potts",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 0.0,
+    "block_size": 2,
+    "sweep_order": "position",
+    "neighbour_k": 8,
+    "max_mutations": 8,
+    "energy_trajectory": null
+   },
+   {
+    "design_id": "mpnn_sample_s2",
+    "scheme": "mpnn_sample",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "MET ALA LYS GLU-D ALA VAL ILE THR LYS THR THR ILE THR ASN PRO ASN TYR PRO PRO SER HIS ILE THR VAL MET ASP PHE GLY ASN ALA VAL LEU VAL THR ALA ASN TYR ARG GLU PRO THR LYS ASN LEU ALA VAL THR ALA LEU ILE ARG GLY VAL SER LYS GLU-D ASP-D ILE LEU ALA TYR LEU LYS ALA GLN GLY TRP THR VAL VAL SER SER THR SER GLU-D LYS THR VAL LEU SER LYS ALA GLY LYS THR PHE ALA GLU MET GLU-D ALA ASP-D LEU LEU ALA PHE ALA LYS SER LYS GLY LEU LYS VAL THR ILE GLY ALA THR GLY THR THR SER ALA",
+    "potts_energy": -51793.83203125,
+    "selective_energy": null,
+    "global_protonation_dH": null,
+    "placement_prob": null,
+    "placement_entropy": null,
+    "sequence_decoded_prob_score": 0.764241651910927,
+    "sequence_entropy": 3.8705572277863185,
+    "protonation_type": null,
+    "site_rank": null,
+    "center_res_id": null,
+    "n_neighbours": null,
+    "n_centers": null,
+    "center_res_ids": null,
+    "center_protonation_types": null,
+    "selective_energies": null,
+    "method": "mpnn_sample",
+    "backend": "mpnn",
+    "selective_source": "potts",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_potts",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 0.0,
+    "block_size": 2,
+    "sweep_order": "position",
+    "neighbour_k": 8,
+    "max_mutations": 8,
+    "energy_trajectory": null
+   }
+  ]
+ }
+}

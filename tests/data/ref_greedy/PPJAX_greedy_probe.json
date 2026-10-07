@@ -1,0 +1,572 @@
+{
+ "greedy_T0": {
+  "criteria": {
+   "backend": "potts",
+   "selective_source": "potts",
+   "center_protonation_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "dep_map": {
+    "HIS-P": [
+     "HIS-S"
+    ],
+    "ASP-P": [
+     "ASP-D"
+    ],
+    "GLU-P": [
+     "GLU-D"
+    ]
+   },
+   "topk_sites": 2,
+   "placement_seq_masked": false,
+   "method": "greedy_energy_block",
+   "selective": true,
+   "combined_lambda": 0.3,
+   "two_phase_frac": 0.5,
+   "temperature": 0.0,
+   "samples_per_site": 1,
+   "cv_patience": 2,
+   "cv_max": 6,
+   "block_size": 3,
+   "global_weight": 0.0,
+   "rank_normalize": false,
+   "zscale_mode": "block",
+   "adjacent_repeat_weight": 0.0,
+   "repetitive_window_weight": 1.0,
+   "repetitive_window_radius": 2,
+   "repetitive_window_parents": [
+    "ALL"
+   ],
+   "repetitive_window_gate_types": [],
+   "self_weight": 1.0,
+   "block_max_rounds": 10,
+   "seed_source": "native",
+   "forbidden_tokens": [
+    "HIS-A",
+    "ASP-A",
+    "GLU-A",
+    "UNK"
+   ],
+   "num_designs": 8,
+   "record_trajectory": false,
+   "center_count": 0,
+   "explicit_centers": [],
+   "center_types": [],
+   "placement_region": [
+    "all"
+   ],
+   "placement_by": "scan_potts",
+   "placement_label": "",
+   "candidate_pool": 12,
+   "n_plan_samples": 64,
+   "max_plans_per_seed": 8,
+   "infill_scope": "chain",
+   "sweep_order": "position",
+   "neighbour_k": 16,
+   "max_mutations": 20
+  },
+  "designs": [
+   {
+    "design_id": "greedy_energy_block_s0",
+    "scheme": "greedy_energy_block",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "MET ALA ARG SER ALA PHE ILE THR ARG SER VAL ILE THR ASN PRO ASP-D ALA PRO PRO SER GLN ILE THR LEU ILE ASP PHE GLY SER ALA VAL MET VAL THR ALA ARG HIS LYS GLU-D ALA THR ALA ASN LEU ALA ALA THR ALA LEU ILE THR GLY VAL SER LEU ALA GLU VAL LEU ALA PHE LEU GLN ALA LYS GLY TYR GLN VAL THR SER SER SER ALA SER SER THR THR LEU ALA LYS ALA GLY VAL THR PHE ALA GLN MET LEU ALA ASP LEU GLN ALA PHE CYS ALA ALA LYS GLY LEU ALA ILE THR VAL GLY ALA THR GLY SER THR ASN ALA",
+    "potts_energy": -51791.75390625,
+    "selective_energy": 0.0,
+    "global_protonation_dH": 27.44140625,
+    "placement_prob": null,
+    "placement_entropy": null,
+    "sequence_decoded_prob_score": 0.7017543817821339,
+    "sequence_entropy": 3.7559595264593097,
+    "protonation_type": "",
+    "site_rank": null,
+    "center_res_id": null,
+    "n_neighbours": 114,
+    "n_centers": 0,
+    "center_res_ids": null,
+    "center_protonation_types": null,
+    "selective_energies": [],
+    "method": "greedy_energy_block",
+    "backend": "potts",
+    "selective_source": "potts",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_potts",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 1.0,
+    "block_size": 3,
+    "sweep_order": "position",
+    "neighbour_k": 16,
+    "max_mutations": 20,
+    "energy_trajectory": null
+   }
+  ]
+ },
+ "greedy_T005_cap6": {
+  "criteria": {
+   "backend": "potts",
+   "selective_source": "potts",
+   "center_protonation_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "dep_map": {
+    "HIS-P": [
+     "HIS-S"
+    ],
+    "ASP-P": [
+     "ASP-D"
+    ],
+    "GLU-P": [
+     "GLU-D"
+    ]
+   },
+   "topk_sites": 2,
+   "placement_seq_masked": false,
+   "method": "greedy_energy_block",
+   "selective": true,
+   "combined_lambda": 0.3,
+   "two_phase_frac": 0.5,
+   "temperature": 0.05,
+   "samples_per_site": 1,
+   "cv_patience": 2,
+   "cv_max": 6,
+   "block_size": 3,
+   "global_weight": 0.0,
+   "rank_normalize": false,
+   "zscale_mode": "block",
+   "adjacent_repeat_weight": 0.0,
+   "repetitive_window_weight": 1.0,
+   "repetitive_window_radius": 2,
+   "repetitive_window_parents": [
+    "ALL"
+   ],
+   "repetitive_window_gate_types": [],
+   "self_weight": 1.0,
+   "block_max_rounds": 10,
+   "seed_source": "native",
+   "forbidden_tokens": [
+    "HIS-A",
+    "ASP-A",
+    "GLU-A",
+    "UNK"
+   ],
+   "num_designs": 8,
+   "record_trajectory": false,
+   "center_count": 0,
+   "explicit_centers": [],
+   "center_types": [],
+   "placement_region": [
+    "all"
+   ],
+   "placement_by": "scan_potts",
+   "placement_label": "",
+   "candidate_pool": 12,
+   "n_plan_samples": 64,
+   "max_plans_per_seed": 8,
+   "infill_scope": "chain",
+   "sweep_order": "position",
+   "neighbour_k": 16,
+   "max_mutations": 20
+  },
+  "designs": [
+   {
+    "design_id": "greedy_energy_block_s0",
+    "scheme": "greedy_energy_block",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "MET ALA ARG SER ALA PHE ILE THR ARG SER LEU ILE THR ASN PRO ASP-D ALA PRO PRO SER GLN ILE THR LEU ILE ASP PHE GLY ASN ALA VAL MET VAL THR ALA LEU HIS ARG GLU-D ALA THR ALA VAL LEU ALA ALA THR ALA LEU ILE THR GLY VAL SER LEU ALA GLU VAL LEU ALA PHE LEU GLN ALA LYS GLY TYR GLN VAL THR SER SER SER ALA GLU-D SER THR VAL LEU SER LYS ALA GLY VAL THR PHE ALA GLN MET LEU ALA ASP LEU GLN ALA PHE CYS ALA ALA LYS GLY LEU ALA ILE THR VAL GLY ALA THR GLY ARG THR SER GLY",
+    "potts_energy": -51803.2265625,
+    "selective_energy": 0.0,
+    "global_protonation_dH": 28.28515625,
+    "placement_prob": null,
+    "placement_entropy": null,
+    "sequence_decoded_prob_score": 0.7072482601689938,
+    "sequence_entropy": 3.784777195038593,
+    "protonation_type": "",
+    "site_rank": null,
+    "center_res_id": null,
+    "n_neighbours": 114,
+    "n_centers": 0,
+    "center_res_ids": null,
+    "center_protonation_types": null,
+    "selective_energies": [],
+    "method": "greedy_energy_block",
+    "backend": "potts",
+    "selective_source": "potts",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_potts",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 1.0,
+    "block_size": 3,
+    "sweep_order": "position",
+    "neighbour_k": 16,
+    "max_mutations": 20,
+    "energy_trajectory": null
+   }
+  ]
+ },
+ "greedy_T005_cap1": {
+  "criteria": {
+   "backend": "potts",
+   "selective_source": "potts",
+   "center_protonation_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "dep_map": {
+    "HIS-P": [
+     "HIS-S"
+    ],
+    "ASP-P": [
+     "ASP-D"
+    ],
+    "GLU-P": [
+     "GLU-D"
+    ]
+   },
+   "topk_sites": 2,
+   "placement_seq_masked": false,
+   "method": "greedy_energy_block",
+   "selective": true,
+   "combined_lambda": 0.3,
+   "two_phase_frac": 0.5,
+   "temperature": 0.05,
+   "samples_per_site": 1,
+   "cv_patience": 1,
+   "cv_max": 1,
+   "block_size": 3,
+   "global_weight": 0.0,
+   "rank_normalize": false,
+   "zscale_mode": "block",
+   "adjacent_repeat_weight": 0.0,
+   "repetitive_window_weight": 1.0,
+   "repetitive_window_radius": 2,
+   "repetitive_window_parents": [
+    "ALL"
+   ],
+   "repetitive_window_gate_types": [],
+   "self_weight": 1.0,
+   "block_max_rounds": 10,
+   "seed_source": "native",
+   "forbidden_tokens": [
+    "HIS-A",
+    "ASP-A",
+    "GLU-A",
+    "UNK"
+   ],
+   "num_designs": 8,
+   "record_trajectory": false,
+   "center_count": 0,
+   "explicit_centers": [],
+   "center_types": [],
+   "placement_region": [
+    "all"
+   ],
+   "placement_by": "scan_potts",
+   "placement_label": "",
+   "candidate_pool": 12,
+   "n_plan_samples": 64,
+   "max_plans_per_seed": 8,
+   "infill_scope": "chain",
+   "sweep_order": "position",
+   "neighbour_k": 16,
+   "max_mutations": 20
+  },
+  "designs": [
+   {
+    "design_id": "greedy_energy_block_s0",
+    "scheme": "greedy_energy_block",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "MET ALA ARG SER ALA PHE ILE THR ARG SER LEU ILE THR ASN PRO ASP-D ALA PRO PRO SER GLN ILE THR LEU ILE ASP PHE GLY ASN ALA VAL MET VAL THR ALA LEU HIS ARG GLU-D ALA THR ALA VAL LEU ALA ALA THR ALA LEU ILE THR GLY VAL SER LEU ALA GLU VAL LEU ALA PHE LEU GLN ALA LYS GLY TYR GLN VAL THR SER SER SER ALA GLU-D SER THR VAL LEU SER LYS ALA GLY VAL THR PHE ALA GLN MET LEU ALA ASP LEU GLN ALA PHE CYS ALA ALA LYS GLY LEU ALA ILE THR VAL GLY ALA THR GLY ARG THR SER GLY",
+    "potts_energy": -51803.2265625,
+    "selective_energy": 0.0,
+    "global_protonation_dH": 28.28515625,
+    "placement_prob": null,
+    "placement_entropy": null,
+    "sequence_decoded_prob_score": 0.7072482601689938,
+    "sequence_entropy": 3.784777195038593,
+    "protonation_type": "",
+    "site_rank": null,
+    "center_res_id": null,
+    "n_neighbours": 114,
+    "n_centers": 0,
+    "center_res_ids": null,
+    "center_protonation_types": null,
+    "selective_energies": [],
+    "method": "greedy_energy_block",
+    "backend": "potts",
+    "selective_source": "potts",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_potts",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 1.0,
+    "block_size": 3,
+    "sweep_order": "position",
+    "neighbour_k": 16,
+    "max_mutations": 20,
+    "energy_trajectory": null
+   }
+  ]
+ },
+ "block_descent_T0": {
+  "criteria": {
+   "backend": "potts",
+   "selective_source": "potts",
+   "center_protonation_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "dep_map": {
+    "HIS-P": [
+     "HIS-S"
+    ],
+    "ASP-P": [
+     "ASP-D"
+    ],
+    "GLU-P": [
+     "GLU-D"
+    ]
+   },
+   "topk_sites": 2,
+   "placement_seq_masked": false,
+   "method": "block_descent",
+   "selective": true,
+   "combined_lambda": 0.3,
+   "two_phase_frac": 0.5,
+   "temperature": 0.0,
+   "samples_per_site": 1,
+   "cv_patience": 3,
+   "cv_max": 50,
+   "block_size": 3,
+   "global_weight": 0.0,
+   "rank_normalize": false,
+   "zscale_mode": "block",
+   "adjacent_repeat_weight": 0.0,
+   "repetitive_window_weight": 1.0,
+   "repetitive_window_radius": 2,
+   "repetitive_window_parents": [
+    "ARG",
+    "LYS",
+    "HIS",
+    "ASP",
+    "GLU"
+   ],
+   "repetitive_window_gate_types": [],
+   "self_weight": 1.0,
+   "block_max_rounds": 10,
+   "seed_source": "native",
+   "forbidden_tokens": [
+    "HIS-A",
+    "ASP-A",
+    "GLU-A",
+    "UNK"
+   ],
+   "num_designs": 8,
+   "record_trajectory": false,
+   "center_count": 3,
+   "explicit_centers": [],
+   "center_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "placement_region": [
+    "all"
+   ],
+   "placement_by": "scan_potts",
+   "placement_label": "",
+   "candidate_pool": 12,
+   "n_plan_samples": 64,
+   "max_plans_per_seed": 8,
+   "infill_scope": "neighbourhood",
+   "sweep_order": "position",
+   "neighbour_k": 16,
+   "max_mutations": 20
+  },
+  "designs": [
+   {
+    "design_id": "ASP-P+GLU-P+HIS-P_block_descent_b3_l0.3_rw1_res33-93-100_s0",
+    "scheme": "block_descent_b3_l0.3_rw1",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "ALA ALA ARG GLN ALA VAL ILE THR GLN SER THR ILE THR SER THR SER ALA PRO PRO ALA GLN ILE THR LEU ILE ASP-D LEU GLY SER ALA VAL VAL ASP-P THR ALA ILE ALA LYS ASN ALA CYS ALA SER LEU ALA ALA THR ALA LEU ILE THR GLY VAL SER LEU ALA GLU-D VAL THR ALA PHE LEU VAL ALA LYS GLY TYR GLN VAL SER SER SER SER ALA SER SER THR THR LEU ALA ASN ALA GLY LEU THR PHE ALA GLU-D ASN LEU ALA THR GLU-P GLN ALA PHE CYS ALA ALA HIS-P GLY LEU ALA ILE THR VAL ALA ALA THR GLY SER THR ALA ALA",
+    "potts_energy": -51643.8046875,
+    "selective_energy": -21.923583984375,
+    "global_protonation_dH": 25.86328125,
+    "placement_prob": 0.0,
+    "placement_entropy": 9.965783753784763e-10,
+    "sequence_decoded_prob_score": 0.95,
+    "sequence_entropy": 2.841446071165522,
+    "protonation_type": "ASP-P+GLU-P+HIS-P",
+    "site_rank": null,
+    "center_res_id": 33,
+    "n_neighbours": 20,
+    "n_centers": 3,
+    "center_res_ids": [
+     33,
+     93,
+     100
+    ],
+    "center_protonation_types": [
+     "ASP-P",
+     "GLU-P",
+     "HIS-P"
+    ],
+    "selective_energies": [
+     -9.4937744140625,
+     -6.8985595703125,
+     -5.53125
+    ],
+    "method": "block_descent",
+    "backend": "potts",
+    "selective_source": "potts",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_potts",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 1.0,
+    "block_size": 3,
+    "sweep_order": "position",
+    "neighbour_k": 16,
+    "max_mutations": 20,
+    "energy_trajectory": null
+   }
+  ]
+ },
+ "block_descent_r30": {
+  "criteria": {
+   "backend": "potts",
+   "selective_source": "potts",
+   "center_protonation_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "dep_map": {
+    "HIS-P": [
+     "HIS-S"
+    ],
+    "ASP-P": [
+     "ASP-D"
+    ],
+    "GLU-P": [
+     "GLU-D"
+    ]
+   },
+   "topk_sites": 2,
+   "placement_seq_masked": false,
+   "method": "block_descent",
+   "selective": true,
+   "combined_lambda": 0.3,
+   "two_phase_frac": 0.5,
+   "temperature": 0.05,
+   "samples_per_site": 1,
+   "cv_patience": 3,
+   "cv_max": 50,
+   "block_size": 3,
+   "global_weight": 0.0,
+   "rank_normalize": false,
+   "zscale_mode": "block",
+   "adjacent_repeat_weight": 0.0,
+   "repetitive_window_weight": 1.0,
+   "repetitive_window_radius": 2,
+   "repetitive_window_parents": [
+    "ARG",
+    "LYS",
+    "HIS",
+    "ASP",
+    "GLU"
+   ],
+   "repetitive_window_gate_types": [],
+   "self_weight": 1.0,
+   "block_max_rounds": 30,
+   "seed_source": "native",
+   "forbidden_tokens": [
+    "HIS-A",
+    "ASP-A",
+    "GLU-A",
+    "UNK"
+   ],
+   "num_designs": 8,
+   "record_trajectory": false,
+   "center_count": 3,
+   "explicit_centers": [],
+   "center_types": [
+    "HIS-P",
+    "ASP-P",
+    "GLU-P"
+   ],
+   "placement_region": [
+    "all"
+   ],
+   "placement_by": "scan_potts",
+   "placement_label": "",
+   "candidate_pool": 12,
+   "n_plan_samples": 64,
+   "max_plans_per_seed": 8,
+   "infill_scope": "neighbourhood",
+   "sweep_order": "position",
+   "neighbour_k": 16,
+   "max_mutations": 20
+  },
+  "designs": [
+   {
+    "design_id": "ASP-P+GLU-P+HIS-P_block_descent_b3_l0.3_rw1_res33-93-100_s0",
+    "scheme": "block_descent_b3_l0.3_rw1",
+    "seed_idx": null,
+    "extended_vocab": "v6",
+    "extended_tokens": "ALA ALA ARG GLN ALA VAL ILE THR GLN SER THR ILE THR SER THR SER ALA PRO PRO ALA GLN ILE THR LEU ILE ASP-D LEU GLY SER ALA VAL MET ASP-P THR ALA ILE ALA LYS ASN ALA CYS ALA SER LEU ALA ALA THR ALA LEU ILE THR GLY VAL SER LEU ALA GLU-D VAL THR ALA PHE LEU VAL ALA LYS GLY TYR GLN VAL SER SER SER SER ALA SER SER THR THR LEU ALA ASN ALA GLY LEU THR PHE ALA GLU-D ASN LEU ALA ASN GLU-P GLN ALA PHE CYS THR ALA HIS-P GLY LEU ALA ILE THR VAL ALA ALA THR GLY SER THR ALA ALA",
+    "potts_energy": -51640.48828125,
+    "selective_energy": -21.51165771484375,
+    "global_protonation_dH": 26.66796875,
+    "placement_prob": 0.0,
+    "placement_entropy": 2.47275352194265e-07,
+    "sequence_decoded_prob_score": 0.8000439998573935,
+    "sequence_entropy": 3.121928094887362,
+    "protonation_type": "ASP-P+GLU-P+HIS-P",
+    "site_rank": null,
+    "center_res_id": 33,
+    "n_neighbours": 20,
+    "n_centers": 3,
+    "center_res_ids": [
+     33,
+     93,
+     100
+    ],
+    "center_protonation_types": [
+     "ASP-P",
+     "GLU-P",
+     "HIS-P"
+    ],
+    "selective_energies": [
+     -9.1739501953125,
+     -6.95263671875,
+     -5.38507080078125
+    ],
+    "method": "block_descent",
+    "backend": "potts",
+    "selective_source": "potts",
+    "placement_label": "",
+    "placement_region": "all",
+    "placement_by": "scan_potts",
+    "combined_lambda": 0.3,
+    "repetitive_window_weight": 1.0,
+    "block_size": 3,
+    "sweep_order": "position",
+    "neighbour_k": 16,
+    "max_mutations": 20,
+    "energy_trajectory": null
+   }
+  ]
+ }
+}
